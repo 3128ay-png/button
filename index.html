@@ -1,0 +1,2336 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>ボタン一覧</title>
+    <meta name="author" content="Ayae Yamazaki" />
+    <meta name="description" content="主要なボタンのコーディングとJavaScriptを掲載している">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="design/favicon.png" />
+    <link rel="icon" href="design/favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+  
+  </head>
+  
+  <body>
+    <header id="header" class="title">
+      <a href="index.html"><img src="design/logo.png" alt="ボタン一覧"></a>
+    </header>
+
+    <!-- 横スクロールセクション -->
+  <section class="button-scroll" id="btn-scroll">
+      <button class="scroll-arrow left" id="scroll-left">＜</button>
+    <div class="btn-scroll-contents">
+      <div class="horizontal_scroll">
+        <ul class="scroll-btn">
+          <li class="scroll-circle"><button class="btn-hover">背景色をホバーで<br>変える</button></li>
+          <li class="scroll-circle"><button class="btn-click">クリックで背景色を<br>変える</button></li>
+          <li class="scroll-circle"><button class="btn-random">背景色をランダムで<br>変える</button></li>
+          <li class="scroll-circle"><button class="btn-flow">背景が左から右に<br>流れる</button></li>
+          <li class="scroll-circle"><button class="btn-flow-change">カーソルの位置で<br>色が変化</button></li>
+          <li class="scroll-circle"><button class="press-button">押し込まれている<br>ボタン</button></li>
+          <li class="scroll-circle"><button class="like-button-js">押し込まれた<br>状態にする</button></li>
+          <li class="scroll-circle"> <button class="btn-push">押し込み前<br>の状態</button></li>
+          <li class="scroll-circle"><div class="btn-gradation-container"><button class="btn-gradation-inner">グラデーション<br>ボタン</button></div></li>
+          <li class="scroll-circle"><div class="btn-container-adv"><button class="btn-inner-adv">ぐるっと<br>ラインが囲む</button><svg class="btn-svg-adv"><rect class="btn-rect-adv" width="100%" height="100%" rx="12" /></svg></div></li>
+          <li class="scroll-circle"><button class="btn-icon">矢印が動く</button></li>
+          <li class="scroll-circle"><button class="btn-change">矢印が<br>変わる</button></li>
+          <li class="scroll-circle"><button class="btn-shine">キラーンと<br>光るボタン</button></li>
+          <li class="scroll-circle"><button class="btn-sparkle">キラキラと<br>輝くボタン</button></li>
+          <li class="scroll-circle"><button class="btn-rotate"><div class="btn-rotate-front">くるっと<br>回転</div><div class="btn-rotate-back">回転したよ！</div></button></li>
+          <li class="scroll-circle"><div class="btn-circle-container"><button class="btn-circle">回転し続ける</button></div></li>
+          <li class="scroll-circle"><button class="btn-bounce">ポンポン弾む</button></li>
+          <li class="scroll-circle"><button class="btn-click-bounce">跳ねながら<br>色が変化</button></li>
+          <li class="scroll-circle"><button class="btn-ripple">波紋</button></li>
+          <li class="scroll-circle"><button class="btn-click-ripple">クリックで<br>波紋</button></li>
+        </ul>
+      </div>
+    </div>
+     <button class="scroll-arrow right" id="scroll-right">＞</button>
+  </section>
+
+  <!-- 検索フォーム -->
+  <div class="search-area">
+    <input type="text" id="search-text" name="search" class="searchform" placeholder="入力してください">
+    <button id="searchBtn" type="button"><img src="design/search.png" alt="検索"></button>
+</div>
+<div class="search-area">
+    <div class="search-result">
+        <div class="search-result__hit-num"></div>
+        <div id="search-result__list"></div>
+    </div>
+</div>
+<ul id="targeArea">
+
+    <li class="targeItem">
+      <!-- ボタン01 -->
+       <div class="btn-item">
+        <span class="num">01</span>
+        <p class="caption">背景色をスムーズに<br>変える</p>
+        <button class="btn-hover">背景色をホバーで<br>変える</button>
+        <a href="#" class="code-link">コードを確認する＞</a>
+        <!-- モーダル -->
+         <div class="sub_window">
+          <div class="sub_window_content">
+            <button class="dark-button">ダークモード</button>
+            <button class="close_sub_window">×</button>
+            <p>HTML</p>
+            <code>&lt;button class="btn-hover">背景色をホバーで変える&lt;/button></code>
+            <p>css</p>
+            <code>.btn-hover{<br>
+              padding: 0.5rem 1.5rem;<br>
+              font-size: 1rem;<br>
+              border: none;<br>
+              border-radius: 8px;<br>
+              background-color: #0bd;<br>
+              color: #fff;<br>
+              cursor: pointer;<br>
+              transition: background-color 0.3s ease;<br>
+            }<br>
+            .btn-hover:hover{<br>
+              background-color: #05b;<br>
+            }</code>
+          </div>
+        </div>
+      </div>
+    </li>
+
+     <!-- ボタン02 -->
+    <li class="targeItem">
+       <div class="btn-item">
+        <span class="num">02</span>
+        <p class="caption">背景色をクリックで<br>変える</p>
+        <button class="btn-click">クリックで背景色を<br>変える</button>
+        <a href="#" class="code-link">コードを確認する＞</a>
+  <!-- モーダル -->
+   <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>&lt;button class="btn-click"><br>
+        クリックで背景色を変える
+        <br>&lt;/button></code>
+      <p>css</p>
+      <code>.btn-click{<br>
+        padding: 0.5rem 1.5rem;<br>
+        font-size: 1rem;<br>
+        border: none;<br>
+        border-radius: 8px;<br>
+        background-color: #07f;<br>
+        color: #fff;<br>
+        cursor: pointer;<br>
+        transition: background-color 0.3s ease;<br>
+      }</code>
+      <p>JavaScript</p>
+        <code>
+          const btn = document.querySelector('btn-click');<br>
+          btn.addEventListener('click',() => {<br>
+            btn.style.backgroundColor = '#05b';<br>
+            setTimeout(() => {<br>
+              btn.style.backgroundColor = '#07f';<br>
+            },500);<br>
+          });
+        </code>
+    </div>
+  </div>
+</div>
+</li>
+
+   <!-- ボタン03 -->
+    <li class="targeItem">
+      <div class="btn-item">
+      <span class="num">03</span>
+      <p class="caption">背景色や速度を<br>カスタマイズする</p>
+      <button class="btn-random">背景色をランダムで<br>変える</button>
+     <a href="#" class="code-link">コードを確認する＞</a>
+   <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>&lt;button class="">&lt;button class="btn-random"><br>背景色をランダムで変える<br>&lt;/button></code>
+      <p>css</p>
+      <code>
+        .btn-click{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          background-color: #07f;<br>
+          color: #fff;<br>
+          cursor: pointer;<br>
+          transition: background-color 0.3s ease;<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const btn = document.querySelector('btn-click');<br>
+          btn.addEventListener('click',() => {<br>
+            const randomColor = `#${Math.floor(Math.random() * 1677215).toString(16)}`;<br>
+            btnRandom .style.backgroundColor = randomColor;<br>
+          });<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン04 -->
+<li class="targeItem">
+  <!--ボタン04-->
+    <div class="btn-item">
+      <span class="num">04</span>
+      <p class="caption">背景色を<br>左から右に流す</p>
+      <button class="btn-flow">背景が左から右に<br>流れる</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-flow"><br>
+        背景が左から右に流れる<br>
+        &lt;/button></code>
+      <p>css</p>
+      <code>
+        .btn-flow{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          color: white;<br>
+          background: linear-gradient(90deg, #0bd, #05b);<br>
+          background-size: 200% 100%;<br>
+          cursor: pointer;<br>
+          transition: background-position 0.3s ease;<br>
+        }<br>
+        .btn-flow:hover{<br>
+          background-position: -100% 0;<br>
+        }<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン05 -->
+<li class="targeItem">
+   <!--ボタン05-->
+    <div class="btn-item">
+      <span class="num">05</span>
+      <p class="caption">カーソルの位置で<br>色を変化させる</p>
+      <button class="btn-flow-change">カーソルの位置で<br>色が変化</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-flow-change"><br>
+        カーソルの位置で色を変化させる<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>  
+        .btn-flow-change{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          color: white;<br>
+          background: linear-gradient(90deg, #0bd, #0f0);<br>
+          background-size: 200% 100%;<br>
+          cursor: pointer;<br>
+          transition: background-position 0.2s ease;<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const btn = document.querySelector('.btn-flow-change');<br>
+        btn.addEventListener('mousemove',(e) => {<br>
+          const rect = btn.getBoundingClientRect();<br>
+          const x = ((e.clientX - rect.left) / rect.width)*100;<br>
+          btn.style.backgroundPosition = `${x}% 0`;<br>
+          });<br>
+          btn.addEventListener('mouseleave',() => {<br>
+            btn.style.backgroundPosition = '0% 0';<br>
+          });<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン06 -->
+<li class="targeItem">
+   <!--ボタン06-->
+<div class="btn-item">
+      <span class="num">06</span>
+      <p class="caption">ボタンが押し込まれる<br>アクション</p>
+      <button class="press-button">押し込まれている<br>ボタン</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="press-button"><br>
+        押し込まれているボタン<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .press-button{<br>
+    padding: 0.5rem 1.5rem;<br>
+    font-size: 1rem;<br>
+    border: none;<br>
+    border-radius: 8px;<br>
+    color: white;<br>
+    background-color: #0bd;<br>
+    box-shadow: 0 4px 4px rdba(0, 126, 148, 0.4);<br>
+    cursor: pointer;<br>
+    transition: translate 0.5s ease, box-shadow 0.2s ease;<br>
+  }<br>
+  .press-button:hover{<br>
+    translate: 0 5px;<br>
+    box-shadow: 0 2px 4px rdba(0,126,148,0.5);<br>
+  }<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン07 -->
+<li class="targeItem">
+  <!--ボタン07-->
+<div class="btn-item">
+      <span class="num">07</span>
+      <p class="caption">ボタンが押し込まれた<br>状態にする</p>
+      <button class="like-button-js">押し込まれた<br>状態にする</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="like-button-js"><br>
+        押し込まれた状態にする<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>  
+        .like-button-js{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          color: white;<br>
+          background-color: #05b;<br>
+          box-shadow: 0 4px 8px rdba(0, 0, 0, 0.3);<br>
+          cursor: pointer;<br>
+          transition: translate 0.2s, box-shadow 0.2s, background 0.2s;<br>
+        }<br>
+        .like-button-js:hover{<br>
+          translate: 0.2px;<br>
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);<br>
+        }<br>
+        .liked-button-js.liked{<br>
+          background: #037;<br>
+          box-shadow: 0 1px 2px rdba(0,0,0,0.3);<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const likeButton = document.querySelector(`.like-button-js`);<br>
+        likeButton.addEventListener('click',() => {
+          if(likeButton.classList.contains('liked')){
+            likeButton.classList.remove('liked');
+            likeButton.textContent = '押し込まれた状態にする'
+          }else {
+            likeButton.classList.add('liked');
+            likeButton.textContent = '押し込んだ！';
+          }
+        });
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン08 -->
+<li class="targeItem">
+   <!--ボタン08-->
+<div class="btn-item">
+      <span class="num">08</span>
+      <p class="caption">ボタンが押し込まれた<br>時にはテキストを変える</p>
+      <button class="btn-push">押し込み前<br>の状態</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-push"><br>
+        押し込み前の状態<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>  
+        .like-button-js{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          color: white;<br>
+          background-color: #05b;<br>
+          box-shadow: 0 4px 8px rdba(0, 0, 0, 0.3);<br>
+          cursor: pointer;<br>
+          transition: translate 0.2s, box-shadow 0.2s, background 0.2s;<br>
+        }<br>
+        .like-button-js:hover{<br>
+          translate: 0.2px;<br>
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);<br>
+        }<br>
+        .liked-button-js.liked{<br>
+          background: #037;<br>
+          box-shadow: 0 1px 2px rdba(0,0,0,0.3);<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const likeButton = document.querySelector(`.like-button-js`);<br>
+        likeButton.addEventListener('click',() => {<br>
+          if(likeButton.classList.contains('liked')){<br>
+            likeButton.classList.remove('liked');<br>
+            likeButton.textContent = '押し込み前の状態'<br>
+          }else {<br>
+            likeButton.classList.add('liked');<br>
+            likeButton.textContent = '押し込んだ！';<br>
+          }<br>
+        });<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン09 -->
+<li class="targeItem">
+ <!--ボタン09-->
+<div class="btn-item-gradation">
+      <span class="num">09</span>
+      <p class="caption">ボタンにグラデーション<br>ラインを加える</p>
+      <div class="btn-gradation-container">
+      <button class="btn-gradation-inner">グラデーションボタン</button>
+      </div>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;div class="btn-gradation-container"><br>
+      &lt;button class="btn-gradation-inner"><br>
+      グラデーションボタン<br>
+      /button><br>
+      &lt;/div>
+      </code>
+      <p>css</p>
+      <code>
+       .btn-gradation-container{<br>
+    position: relative;<br>
+    overflow: hidden;<br>
+    display: flex;<br>
+    align-items: center;<br>
+    justify-content: center;<br>
+    max-width: 320px;<br>
+    border-radius: 12px;<br>
+}<br>
+.btn-gradation-inner{<br>
+    margin: 6px;<br>
+    position: relative;<br>
+    z-index: 1;<br>
+    width: 100%;<br>
+    padding: 1.5rem;<br>
+    border-radius: 10px;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+}<br>
+/*背景で円上のグラデーションを回転させる*/<br>
+.btn-gradation-container::before{<br>
+    content: "";<br>
+    background: linear-gradient(90deg, #0bd, #f6b);<br>
+    height: 500px;<br>
+    width: 500px;<br>
+    position: absolute;<br>
+    animation: rotate-line 4s linear infinite;<br>
+}<br>
+@keyframes rotate-line{<br>
+    0%{<br>
+        transform: rotate(0deg);<br>
+    }<br>
+    100%{<br>
+        transform: rotate(360deg);<br>
+    }<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン10 -->
+<li class="targeItem">
+ <!--ボタン10-->
+<div class="btn-item-adv">
+      <span class="num">10</span>
+      <p class="caption">クリック時に<br>ぐるっと囲む</p> 
+      <div class="btn-container-adv">
+      <button class="btn-inner-adv">ぐるっと<br>ラインが囲む</button>
+      <svg class="btn-svg-adv">
+        <rect class="btn-rect-adv" width="100%" height="100%" rx="12" />
+      </svg>
+    </div>
+    <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;div class="btn-container-adv"><br>
+        &lt;button class="btn-inner-adv"><br>
+        ぐるっとラインが囲む<br>
+        &lt;/button><br>
+      &lt;svg class="btn-svg-adv"><br>
+        &lt;rect class="btn-rect-adv" width="100%" heigth="100%" rx="12" /><br>
+      &lt;/svg><br>
+      &lt;/div><br>
+      </code>
+      <p>css</p>
+      <code>
+.btn-container-adv{<br>
+    position: relative;<br>
+    max-width: 320px;<br>
+}<br>
+.btn-inner-adv{<br>
+    width: 100%;<br>
+    padding: 0.5rem 1.5rem;<br>
+    border-radius: 12px;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+}<br>
+.btn-svg-adv{<br>
+    width: 100%;<br>
+    height: 100%;<br>
+    position: absolute;<br>
+    top: 0;<br>
+    left: 0;<br>
+    overflow: visible;<br>
+    pointer-events: none;<br>
+    z-index: 1;<br>
+}<br>
+.btn-rect-adv{<br>
+    fill: none;<br>
+    stroke: #0bd;<br>
+    stroke-width: 6px;<br>
+    stroke-dasharray: 400%;<br>
+    stroke-dashoffset: 400%;<br>
+}<br>
+/*activeクラスが付与された瞬間からアニメーション開始*/<br>
+.btn-rect-adv.active{<br>
+    animation: line 1s forwards;<br>
+}<br>
+@keyframes line{<br>
+    to{<br>
+        stroke-dashoffset: 0;<br>
+    }<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+       const btnAdv = document.querySelector('.btn-inner-adv'); <br>
+       const rectAdv = document.querySelector('.btn-rect-adv'); <br>
+       btnAdv.addEventListener('click',() => {<br>
+        //一度クリックを外して再度付与することで連続クリックでもアニメ再生可能に<br>
+        rectAdv.classList.remove('active');<br>
+        //再描画を待ってからクラス付与<br>
+        setTimeout(() => {<br>
+          rectAdv.classList.add('active');<br>
+        },10);<br>
+       });<br>
+           
+      </code>
+    </div>
+  </div>
+</div>
+
+</li>
+
+<!-- ボタン11 -->
+<li class="targeItem">
+  <div class="btn-item">
+      <span class="num">11</span>
+      <p class="caption">>字を<br>動かす</p>
+      <button class="btn-icon">矢印が動く</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-icon"><br>
+        矢印が動く<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-icon{<br>
+    position: relative;<br>
+    padding: 0.5rem 1.5rem;<br>
+    font-size: 1rem;<br>
+    border: none;<br>
+    border-radius: 8px;<br>
+    color: white;<br>
+    background-color: #0bd;<br>
+    cursor: pointer;<br>
+}<br>
+.btn-icon::after{<br>
+    content: '';<br>
+    position: absolute;<br>
+    top: calc(50% - 4px);<br>
+    right: 16px;<br>
+    width: 8px;<br>
+    height: 8px;<br>
+    border-top: 2px solid;<br>
+    border-right: 2px solid;<br>
+    rotate: 45deg;<br>
+    transition: .5s;<br>
+}<br>
+.btn-icon:hover:after{<br>
+    right: 10px;<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン12 -->
+<li class="targeItem">
+   <!--ボタン12-->
+<div class="btn-item">
+      <span class="num">12</span>
+      <p class="caption">>字とテキストを<br>入れ替える</p>
+      <button class="btn-change">矢印が<br>変わる</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-change"><br>
+        矢印が変わる<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+.btn-change{<br>
+    width: 180px;<br>
+    position: relative;<br>
+    padding: 0.5rem 1.5rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #05b;<br>
+}<br>
+.btn-change::after{<br>
+    content: '';<br>
+    position: absolute;<br>
+    top: calc(50% - 4px);<br>
+    right: 16px;<br>
+    width: 8px;<br>
+    height: 8px;<br>
+    border-top:2px solid;<br>
+    border-right: 2px solid;<br>
+    rotate: 45deg;<br>
+    transition: .5s;<br>
+}<br>
+.btn-change.done::after{<br>
+    top: calc(50% - 6px);<br>
+    width: 12px;<br>
+    height: 6px;<br>
+    rotate: 125deg;<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+      const btnChange = document .querySelector('.btn-change');<br>
+      btnChange.addEventListener('click',() => {<br>
+        btnChange.classList.add('done');<br>
+        btnChange.textContent = '完了！';<br>
+      });<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン13 -->
+<li class="targeItem">
+   <!--ボタン13-->
+<div class="btn-item">
+      <span class="num">13</span>
+      <p class="caption">ボタンの上に<br>サッと光を流す</p>
+      <button class="btn-shine">キラーンと<br>光るボタン</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-shine"><br>
+        キラーンと<br>光るボタン
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-shine{<br>
+    position: relative;<br>
+    padding: 1rem 1.5rem;<br>
+    font-size: 1rem;<br>
+    border: 0;<br>
+    border-radius: 8px;<br>
+    background-color: #0bd;<br>
+    color: #fff;<br>
+    cursor: pointer;<br>
+    overflow: hidden;<br>
+}<br>
+.btn-shine::before{<br>
+    content: '';<br>
+    position: absolute;<br>
+    top: 0;<br>
+    left: -150%;<br>
+    width: 100%;<br>
+    height: 100%;<br>
+    background: linear-gradient(<br>
+        120deg,<br>
+        rgba(255, 255, 255, 0) 0%,<br>
+        rgba(255, 255, 255, 0.6) 50%,<br>
+        rgba(255, 255, 255, 0) 100%<br>
+    );<br>
+    transform: skewX(-20deg);<br>
+}<br>
+.btn-shine:hover::before{<br>
+    translate: 300% 0;<br>
+    transition: .5s;<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン14 -->
+<li class="targeItem">
+   <!--ボタン14-->
+<div class="btn-item">
+      <span class="num">14</span>
+      <p class="caption">キラキラする<br>演出を加える</p>
+      <button class="btn-sparkle">キラキラと<br>輝くボタン</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-random"><br>
+        背景色をランダムで変える<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+.btn-sparkle{<br>
+    position: relative;<br>
+    padding: 1rem 1.5rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #05b;<br>
+}<br>
+.btn-sparkle .sparkle{<br>
+    position: absolute;<br>
+    width: 8px;<br>
+    height: 8px;<br>
+    background-color: rgba(255, 255, 255, .5);<br>
+    border-radius: 50%;<br>
+    box-shadow: 0 0 8px rgba(255,255,255,0.8);<br>
+    animation: sparkle-animation 2s infinite;<br>
+    pointer-events: none;<br>
+}<br>
+@keyframes sparkle-animation {<br>
+    0%{<br>
+        transform: scale(0);<br>
+        opacity: 1;<br>
+    }<br>
+    50%{<br>
+        transform: scale(1);<br>
+        opacity: 0.8;<br>
+    }<br>
+    100%{<br>
+        transform: scale(0);<br>
+        opacity: 0;<br>
+    }<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      const button = document.querySelector('.btn-sparkle');<br>
+      function createSparkle(){<br>
+        const sparkle = document.createrElement('div');<br>
+        sparkle.classlist.add('sparkle');<br>
+        const size = Math.random()*6 + 4;<br>
+        sparkle.style.width = `${size}px`;<br>
+        sparkle.style.height = `${size}px`;<br>
+        const x = Math.random()* button.offsetWidth;<br>
+        const y = Math.random()* button.offsetHeight;<br>
+        sparkle.style.left = `${x}px`;<br>
+        sparkle.style.top = `${y}px`;<br>
+        button.appendChild(sparkle);<br>
+        setTime(() => {<br>
+          sparkle.remove();<br>
+        },2000);<br>
+      }<br>
+      function sparklleEffect(){<br>
+        setInterval(createSparkle,300);<br>
+      }<br>
+      sparklleEffect();<br>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン15 -->
+<li class="targeItem">
+   <!--ボタン15-->
+<div class="btn-item">
+      <span class="num">15</span>
+      <p class="caption">ボタンを<br>くるっと回転させる</p>
+      <button class="btn-rotate">
+        <div class="btn-rotate-front">くるっと<br>回転</div>
+        <div class="btn-rotate-back">回転したよ！</div>
+      </button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-rotate"><br>
+         &lt;div class="btn-rotate-front">くるっと回転 &lt;/div><br>
+          &lt;div class="btn-rotate-back">回転したよ！ &lt;/div><br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-rotate{<br>
+    position: relative;<br>
+    padding: 1rem 1.5rem;<br>
+    width: 150px;<br>
+    height: 80px;<br>
+    display: flex;<br>
+    justify-content: center;<br>
+    align-items: center;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #0bd;<br>
+    transition: rotate .6s;<br>
+    transform-style: preserve-3d;<br>
+}<br>
+.btn-rotate-front,<br>
+.btn-rotate-back {<br>
+  position: absolute;<br>
+  width: 100%;<br>
+  height: 100%;<br>
+  display: flex; <br>               
+  justify-content: center; <br>     
+  align-items: center;<br>          
+  backface-visibility: hidden;<br>
+  border-radius: 8px;<br>
+}<br>
+.btn-rotate-back {<br>
+  background-color: #05b;<br>
+  rotate: X 180deg;<br>
+}<br>
+.btn-rotate:hover {<br>
+  rotate: X 180deg;<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン16 -->
+<li class="targeItem">
+  <!--ボタン16-->
+<div class="btn-item">
+      <span class="num">16</span>
+      <p class="caption">一気にクリックで<br>高速回転させる</p>
+      <div class="btn-circle-container">
+      <button class="btn-circle">回転し続ける</button>
+      </div>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;div class="btn-circle-container"><br>
+      &lt;button class="btn-circle">回転し続ける<br>
+      &lt;/button><br>
+      &lt;/div><br>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-circle-container{<br>
+          position: relative;<br>
+      }<br>
+      .btn-circle{<br>
+    position: absolute;<br>
+    padding: 1rem 1.5rem;<br>
+    width: 180px;<br>
+    height: 180px;<br>
+    font-size: 1rem;<br>
+    color: #fff;<br>
+    background: transparent;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+}<br>
+.btn-circle::before,.btn-circle::after{<br>
+    content: '';<br>
+    position: absolute;<br>
+    width: 100%;<br>
+    height: 100%;<br>
+    top: 0;<br>
+    left: 0;<br>
+    z-index: -1;<br>
+    mix-blend-mode: multiply;<br>
+}<br>
+.btn-circle::before{<br>
+    background: #0bd;<br>
+    border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;<br>
+    animation: border-animation 6s infinite linear;<br>
+}<br>
+.btn-circle::after{<br>
+    background: #f3a;<br>
+    border-radius:70% 40% 50% 50%/50%;<br>
+    animation: border-animation 4s infinite linear;<br>
+}<br>
+@keyframes border-animation {<br>
+    to { rotate:360deg; }<br>
+}<br>
+/*高速回転のクラス*/<br>
+.btn-circle.fast-spin::before,<br>
+.btn-circle.fast-spin::after{<br>
+    animation-duration: .4s;<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+      const button = document.querySelector('.btn-circle');<br>
+      button.addEventListener('click',() => {<br>
+        button.classList.add('fast-spin');<br>
+        setTimeout(() => {<br>
+          button.classList.remove('fast-spin');<br>
+        },400);<br>
+      })<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+</li>
+
+<!-- ボタン17 -->
+<li class="targeItem">
+  <!--ボタン17-->
+<div class="btn-item">
+      <span class="num">17</span>
+      <p class="caption">上下に<br>弾ませる</p>
+      <button class="btn-bounce">ポンポン<br>弾む</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-bounce"><br>
+        ポンポン弾む<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+.btn-bounce{<br>
+    padding: 1rem 1.5rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #0bd;<br>
+}<br>
+.btn-bounce:hover{<br>
+    animation: bounce 1s infinite ease-in-out;<br>
+}<br>
+@keyframes bounce{<br>
+    0%, 100%{<br>
+        translate: 0;<br>
+    }<br>
+    50%{<br>
+        translate: 0 -10px;<br>
+    }<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン18 -->
+<li class="targeItem">
+  <!--ボタン18-->
+<div class="btn-item">
+      <span class="num">18</span>
+      <p class="caption">クリックで跳ねながら<br>色を変化させる</p>
+      <button class="btn-click-bounce">跳ねながら<br>色が変化</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-click-bounce"><br>
+        跳ねながら色が変化<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-click-bounce{<br>
+          padding: 1rem 1.5rem;<br>
+          border: 0;<br>
+          font-size: 1rem;<br>
+          cursor: pointer;<br>
+          border-radius: 8px;<br>
+          color: #fff;<br>
+          background-color: #05b;<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const colors = ['#0bd','#f66','#0c6','#f83']<br>
+        let colorIndex = 0;<br>
+        const button = document.querySelector('.btn-click-bounce');<br>
+        button.addEventListener('click',()=>{<br>
+        button.style.transition = 'translate 0.2s ease , background-color 0.2s ease';<br>
+        button.style.translate = '0 -10px';<br>
+        button.style.backgroundColor = colors[colorIndex];<br>
+        serTimeout(() => button.style.translate = '0',200);<br>
+        colorIndex = (colorIndex + 1) % colors.length;<br>
+      });<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン19 -->
+<li class="targeItem">
+  <!--ボタン19-->
+<div class="btn-item">
+      <span class="num">19</span>
+      <p class="caption">波紋を<br>演出する</p>
+      <button class="btn-ripple">波紋</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-ripple"><br>
+        クリックで波紋<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-ripple{<br>
+    position: relative;<br>
+    padding: 1rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    width: 80px;<br>
+    height: 80px;<br>
+    cursor: pointer;<br>
+    border-radius: 50%;<br>
+    color: #fff;<br>
+    background-color: #0bd;<br>
+}<br>
+.btn-ripple::after,<br>
+.btn-ripple::before{<br>
+    content: '';<br>
+    position: absolute;<br>
+    top: 50%;<br>
+    left: 50%;<br>
+    translate: -50% -50%;<br>
+    border: 1px solid #0bd;<br>
+    width: 100px;<br>
+    height: 100px;<br>
+    border-radius: 50px;<br>
+    animation: ripple-animation 2s linear infinite;<br>
+}<br>
+.btn-ripple::after{<br>
+    animation-delay: .6s;<br>
+}<br>
+/*波紋のアニメ――ション*/<br>
+@keyframes ripple-animation {<br>
+    0%{<br>
+        scale: .6;<br>
+    }<br>
+    100%{<br>
+        scale:1.2;<br>
+        opacity: 0;<br>
+    }<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+</li>
+
+<!-- ボタン20 -->
+<li class="targeItem">
+  <!--ボタン20-->
+<div class="btn-item">
+      <span class="num">20</span>
+      <p class="caption">クリックで<br>波紋が広がる</p>
+      <button class="btn-click-ripple">クリックで<br>波紋</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-click-ripple"><br>
+        クリックで波紋<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-click-ripple{<br>
+    position: relative;<br>
+    padding: 1rem 1.5rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #05b;<br>
+    overflow: hidden;<br>
+}<br>
+.ripple{<br>
+    position: absolute;<br>
+    border-radius: 50%;<br>
+    scale: 0;<br>
+    animation: ripple .6s linear;<br>
+    background: rgba(255, 255, 255, .6);<br>
+}<br>
+@keyframes ripple{<br>
+    to{<br>
+        scale:3;<br>
+        opacity: 0;<br>
+    }<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      const button = document.querySelector('.btn-click-ripple');<br>
+      button.addEventListener('click',(e) => {<br>
+        const ripple = document.crearteElement('span');<br>
+        const rect = button.getBoundingClientRect();<br>
+        const size = Math.max(rect.width, rect.height);<br>
+        ripple.style.width = ripple.style.height = `${size}px`;<br>
+        ripple.style.left = `${e.clientX - rect.left - size / 2}px`<br>
+        ripple.style.top = `${e.clientY - rect.top - size / 2}px`<br>
+        ripple.classList.add('ripple');<br>
+        button.appendChild(ripple);<br>
+        setTimeout(() => ripple.remove(),600);<br>
+      });<br>
+    </div>
+  </div>
+</div>
+</li>
+  
+
+  
+  
+  </ul>
+
+<!--　ボタン一覧見出し -->
+  <h1 class="section-title"><img class="logo" src="design/logo.png" alt="ボタン一覧"></h1>
+ 
+
+     <!-- ボタン一覧 --> 
+
+   <p class="note">クリックで動きを確認してね</p>
+  <section class="btn-list"> 
+
+      <!-- ボタン01 -->
+       <div class="btn-item">
+        <span class="num">01</span>
+        <p class="caption">背景色をスムーズに<br>変える</p>
+        <button class="btn-hover">背景色をホバーで<br>変える</button>
+        <a href="#" class="code-link">コードを確認する＞</a>
+        <!-- モーダル -->
+         <div class="sub_window">
+          <div class="sub_window_content">
+            <button class="dark-button">ダークモード</button>
+            <button class="close_sub_window">×</button>
+            <p>HTML</p>
+            <code>&lt;button class="btn-hover">背景色をホバーで変える&lt;/button></code>
+            <p>css</p>
+            <code>.btn-hover{<br>
+              padding: 0.5rem 1.5rem;<br>
+              font-size: 1rem;<br>
+              border: none;<br>
+              border-radius: 8px;<br>
+              background-color: #0bd;<br>
+              color: #fff;<br>
+              cursor: pointer;<br>
+              transition: background-color 0.3s ease;<br>
+            }<br>
+            .btn-hover:hover{<br>
+              background-color: #05b;<br>
+            }</code>
+          </div>
+        </div>
+      </div>
+
+<!-- ボタン02 -->
+<div class="btn-item">
+  <span class="num">02</span>
+  <p class="caption">背景色をクリックで<br>変える</p>
+  <button class="btn-click">クリックで背景色を<br>変える</button>
+  <a href="#" class="code-link">コードを確認する＞</a>
+  <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>&lt;button class="btn-click"><br>
+        クリックで背景色を変える<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>.btn-click{<br>
+        padding: 0.5rem 1.5rem;<br>
+        font-size: 1rem;<br>
+        border: none;<br>
+        border-radius: 8px;<br>
+        background-color: #07f;<br>
+        color: #fff;<br>
+        cursor: pointer;<br>
+        transition: background-color 0.3s ease;<br>
+      }</code>
+      <p>JavaScript</p>
+        <code>
+          const btn = document.querySelector('btn-click');<br>
+          btn.addEventListener('click',() => {<br>
+            btn.style.backgroundColor = '#05b';<br>
+            setTimeout(() => {<br>
+              btn.style.backgroundColor = '#07f';<br>
+            },500);<br>
+          });
+        </code>
+    </div>
+  </div>
+</div>
+
+<!--ボタン03-->
+<div class="btn-item">
+      <span class="num">03</span>
+      <p class="caption">背景色や速度を<br>カスタマイズする</p>
+      <button class="btn-random">背景色をランダムで<br>変える</button>
+     <a href="#" class="code-link">コードを確認する＞</a>
+   <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-random"><br>
+        背景色をランダムで変える<br>
+        &lt;/button></code>
+      <p>css</p>
+      <code>
+        .btn-click{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          background-color: #07f;<br>
+          color: #fff;<br>
+          cursor: pointer;<br>
+          transition: background-color 0.3s ease;<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const btn = document.querySelector('btn-click');<br>
+          btn.addEventListener('click',() => {<br>
+            const randomColor = `#${Math.floor(Math.random() * 1677215).toString(16)}`;<br>
+            btnRandom .style.backgroundColor = randomColor;<br>
+          });
+      </code>
+    </div>
+  </div>
+</div>
+
+<!--ボタン04-->
+    <div class="btn-item">
+      <span class="num">04</span>
+      <p class="caption">背景色を<br>左から右に流す</p>
+      <button class="btn-flow">背景が左から右に<br>流れる</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-flow"><br>
+        背景が左から右に流れる<br>
+        &lt;/button></code>
+      <p>css</p>
+      <code>
+        .btn-flow{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          color: white;<br>
+          background: linear-gradient(90deg, #0bd, #05b);<br>
+          background-size: 200% 100%;<br>
+          cursor: pointer;<br>
+          transition: background-position 0.3s ease;<br>
+        }<br>
+        .btn-flow:hover{<br>
+          background-position: -100% 0;<br>
+        }<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+    <!--ボタン05-->
+    <div class="btn-item">
+      <span class="num">05</span>
+      <p class="caption">カーソルの位置で<br>色を変化させる</p>
+      <button class="btn-flow-change">カーソルの位置で<br>色が変化</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-flow-change"><br>
+        カーソルの位置で色を変化させる<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>  
+        .btn-flow-change{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          color: white;<br>
+          background: linear-gradient(90deg, #0bd, #0f0);<br>
+          background-size: 200% 100%;<br>
+          cursor: pointer;<br>
+          transition: background-position 0.2s ease;<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const btn = document.querySelector('.btn-flow-change');<br>
+        btn.addEventListener('mousemove',(e) => {<br>
+          const rect = btn.getBoundingClientRect();<br>
+          const x = ((e.clientX - rect.left) / rect.width)*100;<br>
+          btn.style.backgroundPosition = `${x}% 0`;<br>
+          });<br>
+          btn.addEventListener('mouseleave',() => {<br>
+            btn.style.backgroundPosition = '0% 0';<br>
+          });<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン06-->
+<div class="btn-item">
+      <span class="num">06</span>
+      <p class="caption">ボタンが押し込まれる<br>アクション</p>
+      <button class="press-button">押し込まれている<br>ボタン</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="press-button"><br>
+        押し込まれているボタン<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .press-button{<br>
+    padding: 0.5rem 1.5rem;<br>
+    font-size: 1rem;<br>
+    border: none;<br>
+    border-radius: 8px;<br>
+    color: white;<br>
+    background-color: #0bd;<br>
+    box-shadow: 0 4px 4px rdba(0, 126, 148, 0.4);<br>
+    cursor: pointer;<br>
+    transition: translate 0.5s ease, box-shadow 0.2s ease;<br>
+  }<br>
+  .press-button:hover{<br>
+    translate: 0 5px;<br>
+    box-shadow: 0 2px 4px rdba(0,126,148,0.5);<br>
+  }<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン07-->
+<div class="btn-item">
+      <span class="num">07</span>
+      <p class="caption">ボタンが押し込まれた<br>状態にする</p>
+      <button class="like-button-js">押し込まれた<br>状態にする</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="like-button-js"><br>
+        押し込まれた状態にする<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>  
+        .like-button-js{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          color: white;<br>
+          background-color: #05b;<br>
+          box-shadow: 0 4px 8px rdba(0, 0, 0, 0.3);<br>
+          cursor: pointer;<br>
+          transition: translate 0.2s, box-shadow 0.2s, background 0.2s;<br>
+        }<br>
+        .like-button-js:hover{<br>
+          translate: 0.2px;<br>
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);<br>
+        }<br>
+        .liked-button-js.liked{<br>
+          background: #037;<br>
+          box-shadow: 0 1px 2px rdba(0,0,0,0.3);<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const likeButton = document.querySelector(`.like-button-js`);<br>
+        likeButton.addEventListener('click',() => {<br>
+          if(likeButton.classList.contains('liked')){<br>
+            likeButton.classList.remove('liked');<br>
+            likeButton.textContent = '押し込まれた状態にする'<br>
+          }else {<br>
+            likeButton.classList.add('liked');<br>
+            likeButton.textContent = '押し込んだ！';<br>
+          }<br>
+        });<><br>
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン08-->
+<div class="btn-item">
+      <span class="num">08</span>
+      <p class="caption">ボタンが押し込まれた<br>時にはテキストを変える</p>
+      <button class="btn-push">押し込み前<br>の状態</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-push"><br>
+        押し込み前の状態<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>  
+        .like-button-js{<br>
+          padding: 0.5rem 1.5rem;<br>
+          font-size: 1rem;<br>
+          border: none;<br>
+          border-radius: 8px;<br>
+          color: white;<br>
+          background-color: #05b;<br>
+          box-shadow: 0 4px 8px rdba(0, 0, 0, 0.3);<br>
+          cursor: pointer;<br>
+          transition: translate 0.2s, box-shadow 0.2s, background 0.2s;<br>
+        }<br>
+        .like-button-js:hover{<br>
+          translate: 0.2px;<br>
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);<br>
+        }<br>
+        .liked-button-js.liked{<br>
+          background: #037;<br>
+          box-shadow: 0 1px 2px rdba(0,0,0,0.3);<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const likeButton = document.querySelector(`.like-button-js`);<br>
+        likeButton.addEventListener('click',() => {<br>
+          if(likeButton.classList.contains('liked')){<br>
+            likeButton.classList.remove('liked');<br>
+            likeButton.textContent = '押し込み前の状態'<br>
+          }else {<br>
+            likeButton.classList.add('liked');<br>
+            likeButton.textContent = '押し込んだ！';<br>
+          }<br>
+        });<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン09-->
+<div class="btn-item-gradation">
+      <span class="num">09</span>
+      <p class="caption">ボタンにグラデーション<br>ラインを加える</p>
+      <div class="btn-gradation-container">
+      <button class="btn-gradation-inner">グラデーションボタン</button>
+      </div>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;div class="btn-gradation-container"><br>
+      &lt;button class="btn-gradation-inner"><br>
+      グラデーションボタン<br>
+      /button><br>
+      &lt;/div>
+      </code>
+      <p>css</p>
+      <code>
+       .btn-gradation-container{<br>
+    position: relative;<br>
+    overflow: hidden;<br>
+    display: flex;<br>
+    align-items: center;<br>
+    justify-content: center;<br>
+    max-width: 320px;<br>
+    border-radius: 12px;<br>
+}<br>
+.btn-gradation-inner{<br>
+    margin: 6px;<br>
+    position: relative;<br>
+    z-index: 1;<br>
+    width: 100%;<br>
+    padding: 1.5rem;<br>
+    border-radius: 10px;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+}<br>
+/*背景で円上のグラデーションを回転させる*/<br>
+.btn-gradation-container::before{<br>
+    content: "";<br>
+    background: linear-gradient(90deg, #0bd, #f6b);<br>
+    height: 500px;<br>
+    width: 500px;<br>
+    position: absolute;<br>
+    animation: rotate-line 4s linear infinite;<br>
+}<br>
+@keyframes rotate-line{<br>
+    0%{<br>
+        transform: rotate(0deg);<br>
+    }<br>
+    100%{<br>
+        transform: rotate(360deg);<br>
+    }<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン10-->
+<div class="btn-item-adv">
+      <span class="num">10</span>
+      <p class="caption">クリック時に<br>ぐるっと囲む</p> 
+      <div class="btn-container-adv">
+      <button class="btn-inner-adv">ぐるっと<br>ラインが囲む</button>
+      <svg class="btn-svg-adv">
+        <rect class="btn-rect-adv" width="100%" height="100%" rx="12" />
+      </svg>
+    </div>
+    <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;div class="btn-container-adv"><br>
+        &lt;button class="btn-inner-adv"><br>
+        ぐるっとラインが囲む<br>
+        &lt;/button><br>
+      &lt;svg class="btn-svg-adv"><br>
+        &lt;rect class="btn-rect-adv" width="100%" heigth="100%" rx="12" /><br>
+      &lt;/svg><br>
+      &lt;/div><br>
+      </code>
+      <p>css</p>
+      <code>
+.btn-container-adv{<br>
+    position: relative;<br>
+    max-width: 320px;<br>
+}<br>
+.btn-inner-adv{<br>
+    width: 100%;<br>
+    padding: 0.5rem 1.5rem;<br>
+    border-radius: 12px;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+}<br>
+.btn-svg-adv{<br>
+    width: 100%;<br>
+    height: 100%;<br>
+    position: absolute;<br>
+    top: 0;<br>
+    left: 0;<br>
+    overflow: visible;<br>
+    pointer-events: none;<br>
+    z-index: 1;<br>
+}<br>
+.btn-rect-adv{<br>
+    fill: none;<br>
+    stroke: #0bd;<br>
+    stroke-width: 6px;<br>
+    stroke-dasharray: 400%;<br>
+    stroke-dashoffset: 400%;<br>
+}<br>
+/*activeクラスが付与された瞬間からアニメーション開始*/<br>
+.btn-rect-adv.active{<br>
+    animation: line 1s forwards;<br>
+}<br>
+@keyframes line{<br>
+    to{<br>
+        stroke-dashoffset: 0;<br>
+    }<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+       const btnAdv = document.querySelector('.btn-inner-adv'); <br>
+       const rectAdv = document.querySelector('.btn-rect-adv'); <br>
+       btnAdv.addEventListener('click',() => {<br>
+        //一度クリックを外して再度付与することで連続クリックでもアニメ再生可能に<br>
+        rectAdv.classList.remove('active');<br>
+        //再描画を待ってからクラス付与<br>
+        setTimeout(() => {<br>
+          rectAdv.classList.add('active');<br>
+        },10);<br>
+       });<br>
+           
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン11-->
+<div class="btn-item">
+      <span class="num">11</span>
+      <p class="caption">>字を<br>動かす</p>
+      <button class="btn-icon">矢印が動く</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-icon"><br>
+        矢印が動く<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-icon{<br>
+    position: relative;<br>
+    padding: 0.5rem 1.5rem;<br>
+    font-size: 1rem;<br>
+    border: none;<br>
+    border-radius: 8px;<br>
+    color: white;<br>
+    background-color: #0bd;<br>
+    cursor: pointer;<br>
+}<br>
+.btn-icon::after{<br>
+    content: '';<br>
+    position: absolute;<br>
+    top: calc(50% - 4px);<br>
+    right: 16px;<br>
+    width: 8px;<br>
+    height: 8px;<br>
+    border-top: 2px solid;<br>
+    border-right: 2px solid;<br>
+    rotate: 45deg;<br>
+    transition: .5s;<br>
+}<br>
+.btn-icon:hover:after{<br>
+    right: 10px;<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン12-->
+<div class="btn-item">
+      <span class="num">12</span>
+      <p class="caption">>字とテキストを<br>入れ替える</p>
+      <button class="btn-change">矢印が<br>変わる</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-change"><br>
+        矢印が変わる<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+.btn-change{<br>
+    width: 180px;<br>
+    position: relative;<br>
+    padding: 0.5rem 1.5rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #05b;<br>
+}<br>
+.btn-change::after{<br>
+    content: '';<br>
+    position: absolute;<br>
+    top: calc(50% - 4px);<br>
+    right: 16px;<br>
+    width: 8px;<br>
+    height: 8px;<br>
+    border-top:2px solid;<br>
+    border-right: 2px solid;<br>
+    rotate: 45deg;<br>
+    transition: .5s;<br>
+}<br>
+.btn-change.done::after{<br>
+    top: calc(50% - 6px);<br>
+    width: 12px;<br>
+    height: 6px;<br>
+    rotate: 125deg;<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+      const btnChange = document .querySelector('.btn-change');<br>
+      btnChange.addEventListener('click',() => {<br>
+        btnChange.classList.add('done');<br>
+        btnChange.textContent = '完了！';<br>
+      });<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン13-->
+<div class="btn-item">
+      <span class="num">13</span>
+      <p class="caption">ボタンの上に<br>サッと光を流す</p>
+      <button class="btn-shine">キラーンと<br>光るボタン</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-shine"><br>
+        キラーンと<br>光るボタン
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-shine{<br>
+    position: relative;<br>
+    padding: 1rem 1.5rem;<br>
+    font-size: 1rem;<br>
+    border: 0;<br>
+    border-radius: 8px;<br>
+    background-color: #0bd;<br>
+    color: #fff;<br>
+    cursor: pointer;<br>
+    overflow: hidden;<br>
+}<br>
+.btn-shine::before{<br>
+    content: '';<br>
+    position: absolute;<br>
+    top: 0;<br>
+    left: -150%;<br>
+    width: 100%;<br>
+    height: 100%;<br>
+    background: linear-gradient(<br>
+        120deg,<br>
+        rgba(255, 255, 255, 0) 0%,<br>
+        rgba(255, 255, 255, 0.6) 50%,<br>
+        rgba(255, 255, 255, 0) 100%<br>
+    );<br>
+    transform: skewX(-20deg);<br>
+}<br>
+.btn-shine:hover::before{<br>
+    translate: 300% 0;<br>
+    transition: .5s;<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン14-->
+<div class="btn-item">
+      <span class="num">14</span>
+      <p class="caption">キラキラする<br>演出を加える</p>
+      <button class="btn-sparkle">キラキラと<br>輝くボタン</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-random"><br>
+        背景色をランダムで変える<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+.btn-sparkle{<br>
+    position: relative;<br>
+    padding: 1rem 1.5rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #05b;<br>
+}<br>
+.btn-sparkle .sparkle{<br>
+    position: absolute;<br>
+    width: 8px;<br>
+    height: 8px;<br>
+    background-color: rgba(255, 255, 255, .5);<br>
+    border-radius: 50%;<br>
+    box-shadow: 0 0 8px rgba(255,255,255,0.8);<br>
+    animation: sparkle-animation 2s infinite;<br>
+    pointer-events: none;<br>
+}<br>
+@keyframes sparkle-animation {<br>
+    0%{<br>
+        transform: scale(0);<br>
+        opacity: 1;<br>
+    }<br>
+    50%{<br>
+        transform: scale(1);<br>
+        opacity: 0.8;<br>
+    }<br>
+    100%{<br>
+        transform: scale(0);<br>
+        opacity: 0;<br>
+    }<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      const button = document.querySelector('.btn-sparkle');<br>
+      function createSparkle(){<br>
+        const sparkle = document.createrElement('div');<br>
+        sparkle.classlist.add('sparkle');<br>
+        const size = Math.random()*6 + 4;<br>
+        sparkle.style.width = `${size}px`;<br>
+        sparkle.style.height = `${size}px`;<br>
+        const x = Math.random()* button.offsetWidth;<br>
+        const y = Math.random()* button.offsetHeight;<br>
+        sparkle.style.left = `${x}px`;<br>
+        sparkle.style.top = `${y}px`;<br>
+        button.appendChild(sparkle);<br>
+        setTime(() => {<br>
+          sparkle.remove();<br>
+        },2000);<br>
+      }<br>
+      function sparklleEffect(){<br>
+        setInterval(createSparkle,300);<br>
+      }<br>
+      sparklleEffect();<br>
+    </div>
+  </div>
+</div>
+
+ <!--ボタン15-->
+<div class="btn-item">
+      <span class="num">15</span>
+      <p class="caption">ボタンを<br>くるっと回転させる</p>
+      <button class="btn-rotate">
+        <div class="btn-rotate-front">くるっと<br>回転</div>
+        <div class="btn-rotate-back">回転したよ！</div>
+      </button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-rotate"><br>
+         &lt;div class="btn-rotate-front">くるっと回転 &lt;/div><br>
+          &lt;div class="btn-rotate-back">回転したよ！ &lt;/div><br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-rotate{<br>
+    position: relative;<br>
+    padding: 1rem 1.5rem;<br>
+    width: 150px;<br>
+    height: 80px;<br>
+    display: flex;<br>
+    justify-content: center;<br>
+    align-items: center;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #0bd;<br>
+    transition: rotate .6s;<br>
+    transform-style: preserve-3d;<br>
+}<br>
+.btn-rotate-front,<br>
+.btn-rotate-back {<br>
+  position: absolute;<br>
+  width: 100%;<br>
+  height: 100%;<br>
+  display: flex; <br>               
+  justify-content: center; <br>     
+  align-items: center;<br>          
+  backface-visibility: hidden;<br>
+  border-radius: 8px;<br>
+}<br>
+.btn-rotate-back {<br>
+  background-color: #05b;<br>
+  rotate: X 180deg;<br>
+}<br>
+.btn-rotate:hover {<br>
+  rotate: X 180deg;<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+<!--ボタン16-->
+<div class="btn-item">
+      <span class="num">16</span>
+      <p class="caption">一気にクリックで<br>高速回転させる</p>
+      <div class="btn-circle-container">
+      <button class="btn-circle">回転し続ける</button>
+      </div>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;div class="btn-circle-container"><br>
+      &lt;button class="btn-circle">回転し続ける<br>
+      &lt;/button><br>
+      &lt;/div><br>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-circle-container{<br>
+          position: relative;<br>
+      }<br>
+      .btn-circle{<br>
+    position: absolute;<br>
+    padding: 1rem 1.5rem;<br>
+    width: 180px;<br>
+    height: 180px;<br>
+    font-size: 1rem;<br>
+    color: #fff;<br>
+    background: transparent;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+}<br>
+.btn-circle::before,.btn-circle::after{<br>
+    content: '';<br>
+    position: absolute;<br>
+    width: 100%;<br>
+    height: 100%;<br>
+    top: 0;<br>
+    left: 0;<br>
+    z-index: -1;<br>
+    mix-blend-mode: multiply;<br>
+}<br>
+.btn-circle::before{<br>
+    background: #0bd;<br>
+    border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;<br>
+    animation: border-animation 6s infinite linear;<br>
+}<br>
+.btn-circle::after{<br>
+    background: #f3a;<br>
+    border-radius:70% 40% 50% 50%/50%;<br>
+    animation: border-animation 4s infinite linear;<br>
+}<br>
+@keyframes border-animation {<br>
+    to { rotate:360deg; }<br>
+}<br>
+/*高速回転のクラス*/<br>
+.btn-circle.fast-spin::before,<br>
+.btn-circle.fast-spin::after{<br>
+    animation-duration: .4s;<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+      const button = document.querySelector('.btn-circle');<br>
+      button.addEventListener('click',() => {<br>
+        button.classList.add('fast-spin');<br>
+        setTimeout(() => {<br>
+          button.classList.remove('fast-spin');<br>
+        },400);<br>
+      })<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+<!--ボタン17-->
+<div class="btn-item">
+      <span class="num">17</span>
+      <p class="caption">上下に<br>弾ませる</p>
+      <button class="btn-bounce">ポンポン<br>弾む</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-bounce"><br>
+        ポンポン弾む<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+.btn-bounce{<br>
+    padding: 1rem 1.5rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #0bd;<br>
+}<br>
+.btn-bounce:hover{<br>
+    animation: bounce 1s infinite ease-in-out;<br>
+}<br>
+@keyframes bounce{<br>
+    0%, 100%{<br>
+        translate: 0;<br>
+    }<br>
+    50%{<br>
+        translate: 0 -10px;<br>
+    }<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+<!--ボタン18-->
+<div class="btn-item">
+      <span class="num">18</span>
+      <p class="caption">クリックで跳ねながら<br>色を変化させる</p>
+      <button class="btn-click-bounce">跳ねながら<br>色が変化</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-click-bounce"><br>
+        跳ねながら色が変化<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-click-bounce{<br>
+          padding: 1rem 1.5rem;<br>
+          border: 0;<br>
+          font-size: 1rem;<br>
+          cursor: pointer;<br>
+          border-radius: 8px;<br>
+          color: #fff;<br>
+          background-color: #05b;<br>
+        }<br>
+      </code>
+      <p>JavaScript</p>
+      <code>
+        const colors = ['#0bd','#f66','#0c6','#f83']<br>
+        let colorIndex = 0;<br>
+        const button = document.querySelector('.btn-click-bounce');<br>
+        button.addEventListener('click',()=>{<br>
+        button.style.transition = 'translate 0.2s ease , background-color 0.2s ease';<br>
+        button.style.translate = '0 -10px';<br>
+        button.style.backgroundColor = colors[colorIndex];<br>
+        serTimeout(() => button.style.translate = '0',200);<br>
+        colorIndex = (colorIndex + 1) % colors.length;<br>
+      });<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+<!--ボタン19-->
+<div class="btn-item">
+      <span class="num">19</span>
+      <p class="caption">波紋を<br>演出する</p>
+      <button class="btn-ripple">波紋</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-ripple"><br>
+        クリックで波紋<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-ripple{<br>
+    position: relative;<br>
+    padding: 1rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    width: 80px;<br>
+    height: 80px;<br>
+    cursor: pointer;<br>
+    border-radius: 50%;<br>
+    color: #fff;<br>
+    background-color: #0bd;<br>
+}<br>
+.btn-ripple::after,<br>
+.btn-ripple::before{<br>
+    content: '';<br>
+    position: absolute;<br>
+    top: 50%;<br>
+    left: 50%;<br>
+    translate: -50% -50%;<br>
+    border: 1px solid #0bd;<br>
+    width: 100px;<br>
+    height: 100px;<br>
+    border-radius: 50px;<br>
+    animation: ripple-animation 2s linear infinite;<br>
+}<br>
+.btn-ripple::after{<br>
+    animation-delay: .6s;<br>
+}<br>
+/*波紋のアニメ――ション*/<br>
+@keyframes ripple-animation {<br>
+    0%{<br>
+        scale: .6;<br>
+    }<br>
+    100%{<br>
+        scale:1.2;<br>
+        opacity: 0;<br>
+    }<br>
+}<br>
+      </code>
+    </div>
+  </div>
+</div>
+
+<!--ボタン20-->
+<div class="btn-item">
+      <span class="num">20</span>
+      <p class="caption">クリックで<br>波紋が広がる</p>
+      <button class="btn-click-ripple">クリックで<br>波紋</button>
+      <a href="#" class="code-link">コードを確認する＞</a>
+    <!-- モーダル -->
+  <div class="sub_window">
+    <div class="sub_window_content">
+      <button class="dark-button">ダークモード</button>
+      <button class="close_sub_window">×</button>
+      <p>HTML</p>
+      <code>
+        &lt;button class="btn-click-ripple"><br>
+        クリックで波紋<br>
+        &lt;/button>
+      </code>
+      <p>css</p>
+      <code>
+        .btn-click-ripple{<br>
+    position: relative;<br>
+    padding: 1rem 1.5rem;<br>
+    border: 0;<br>
+    font-size: 1rem;<br>
+    cursor: pointer;<br>
+    border-radius: 8px;<br>
+    color: #fff;<br>
+    background-color: #05b;<br>
+    overflow: hidden;<br>
+}<br>
+.ripple{<br>
+    position: absolute;<br>
+    border-radius: 50%;<br>
+    scale: 0;<br>
+    animation: ripple .6s linear;<br>
+    background: rgba(255, 255, 255, .6);<br>
+}<br>
+@keyframes ripple{<br>
+    to{<br>
+        scale:3;<br>
+        opacity: 0;<br>
+    }<br>
+}<br>
+      </code>
+      <p>JavaScript</p>
+      const button = document.querySelector('.btn-click-ripple');<br>
+      button.addEventListener('click',(e) => {<br>
+        const ripple = document.crearteElement('span');<br>
+        const rect = button.getBoundingClientRect();<br>
+        const size = Math.max(rect.width, rect.height);<br>
+        ripple.style.width = ripple.style.height = `${size}px`;<br>
+        ripple.style.left = `${e.clientX - rect.left - size / 2}px`<br>
+        ripple.style.top = `${e.clientY - rect.top - size / 2}px`<br>
+        ripple.classList.add('ripple');<br>
+        button.appendChild(ripple);<br>
+        setTimeout(() => ripple.remove(),600);<br>
+      });<br>
+    </div>
+  </div>
+</div>
+   </section>
+  
+   <footer id="footer">
+    <p>&copy; 2025 Ayae Yamazaki. All Rights Reserved.</p>
+  </footer> 
+
+  <script src="button-js.js" defer></script>
+  </body>
+</html>
